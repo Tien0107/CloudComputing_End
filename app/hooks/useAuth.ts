@@ -9,7 +9,7 @@ export function useAuth() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("/api/auth/check");
+        const res = await fetch("/auth/check");
         const data = await res.json();
         setIsAuthenticated(data.isAuthenticated);
       } catch (error) {
